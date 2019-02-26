@@ -38,7 +38,7 @@ export class SkfComponent implements OnInit {
         icon : "menu-icon fa fa-table"
       },{
         title:"Order History",
-        icon : "glyphicon glyphicon-list-alt"
+        icon : "menu-icon fa fa-list-alt"
       }
   ]
 }
