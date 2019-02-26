@@ -18,7 +18,7 @@ import { AvailablityCheckComponent } from './skf/availablity-check/availablity-c
   declarations: [
     AppComponent,
     SkfComponent,
-    SidebarComponent,
+    // SidebarComponent,
     DashboardComponent,
     DemandEstimationComponent,
     PlaceOrderComponent,
