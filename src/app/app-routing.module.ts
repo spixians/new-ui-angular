@@ -8,6 +8,8 @@ import { GreenOrderListComponent } from './skf/green-order-list/green-order-list
 import { YellowOrderListComponent } from './skf/yellow-order-list/yellow-order-list.component';
 import { OrderHistoryComponent } from './skf/order-history/order-history.component';
 import { PlaceOrderComponent } from './skf/place-order/place-order.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 
 import { DashboardCComponent } from './componentSupplier/dashboard-c/dashboard-c.component';
@@ -30,6 +32,7 @@ const appRoutes: Routes = [
     {path: 'yellow-order-list',  component:YellowOrderListComponent},
     {path: 'order-history',  component:OrderHistoryComponent},
     {path: 'place-order',  component:PlaceOrderComponent},
+  
     
 
 
@@ -45,7 +48,9 @@ const appRoutes: Routes = [
   
 
 
-]}
+]},
+{path: 'signup',  component:SignupComponent},
+{path: 'signin',  component:SigninComponent},
 
 
 

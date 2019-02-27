@@ -13,7 +13,7 @@ import { RedOrderListComponent } from './skf/red-order-list/red-order-list.compo
 import { GreenOrderListComponent } from './skf/green-order-list/green-order-list.component';
 import { YellowOrderListComponent } from './skf/yellow-order-list/yellow-order-list.component';
 import { AvailablityCheckComponent } from './skf/availablity-check/availablity-check.component';
-import { LoginComponent } from './auth/login/login.component';
+// import { LoginComponent } from './auth/login/login.component';
 import { Routes, RouterModule }from "@angular/router";
 import { RawmaterialSupplierComponent } from './rawmaterial-supplier/rawmaterial-supplier.component';
 import { ComponentSupplierComponent } from './componentSupplier/component-supplier.component';
@@ -28,14 +28,15 @@ import { skfOrderService } from './services/skf-order.service';
 import { SkfOrderClass } from './classes/skf-order-schema';
 // import { injectInjector } from '@angular/core/src/render3/di';
 import { Observable } from 'rxjs';
+import { AuthService} from './auth/auth.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
-const appRoutes : Routes =[
-  {path: 'skf/dashboard', component: DashboardComponent}
+
   // import { DashboardComponent } from './skf/dashboard/dashboard.component';
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ const appRoutes : Routes =[
     GreenOrderListComponent,
     YellowOrderListComponent,
     AvailablityCheckComponent,
-    LoginComponent,
+    // LoginComponent,
     RawmaterialSupplierComponent,
     ComponentSupplierComponent,
     DashboardCComponent,
@@ -58,16 +59,18 @@ const appRoutes : Routes =[
     YellowOrderCComponent,
     RedOrderCComponent,
     AvailabilityCheckCComponent,
-    OrderHistoryCComponent
+    OrderHistoryCComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes),
+    // RouterModule.forRoot(),
     HttpClientModule
     ],
-  providers: [skfOrderService, SkfOrderClass],
+  providers: [skfOrderService, SkfOrderClass,AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
