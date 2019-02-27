@@ -16,6 +16,15 @@ import { AvailablityCheckComponent } from './skf/availablity-check/availablity-c
 import { LoginComponent } from './auth/login/login.component';
 import { Routes, RouterModule }from "@angular/router";
 import { RawmaterialSupplierComponent } from './rawmaterial-supplier/rawmaterial-supplier.component';
+import { ComponentSupplierComponent } from './componentSupplier/component-supplier.component';
+import { DashboardCComponent } from './componentSupplier/dashboard-c/dashboard-c.component';
+import { PlaceOrderCComponent } from './componentSupplier/place-order-c/place-order-c.component';
+import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
+import { YellowOrderCComponent } from './componentSupplier/yellow-order-c/yellow-order-c.component';
+import { RedOrderCComponent } from './componentSupplier/red-order-c/red-order-c.component';
+import { AvailabilityCheckCComponent } from './componentSupplier/availability-check-c/availability-check-c.component';
+import { OrderHistoryCComponent } from './componentSupplier/order-history-c/order-history-c.component';
+// import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 const appRoutes : Routes =[
@@ -35,7 +44,15 @@ const appRoutes : Routes =[
     YellowOrderListComponent,
     AvailablityCheckComponent,
     LoginComponent,
-    RawmaterialSupplierComponent
+    RawmaterialSupplierComponent,
+    ComponentSupplierComponent,
+    DashboardCComponent,
+    PlaceOrderCComponent,
+    GreenOrderCComponent,
+    YellowOrderCComponent,
+    RedOrderCComponent,
+    AvailabilityCheckCComponent,
+    OrderHistoryCComponent
   ],
   imports: [
     BrowserModule,
