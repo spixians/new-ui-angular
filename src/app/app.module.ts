@@ -14,8 +14,13 @@ import { GreenOrderListComponent } from './skf/green-order-list/green-order-list
 import { YellowOrderListComponent } from './skf/yellow-order-list/yellow-order-list.component';
 import { AvailablityCheckComponent } from './skf/availablity-check/availablity-check.component';
 import { LoginComponent } from './auth/login/login.component';
-// import { SidebarComponent } from './skf/sidebar/sidebar.component';
+import { Routes, RouterModule }from "@angular/router";
+import { RawmaterialSupplierComponent } from './rawmaterial-supplier/rawmaterial-supplier.component';
 
+// import { SidebarComponent } from './skf/sidebar/sidebar.component';
+const appRoutes : Routes =[
+  {path: 'skf', component: SkfComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,12 +34,14 @@ import { LoginComponent } from './auth/login/login.component';
     GreenOrderListComponent,
     YellowOrderListComponent,
     AvailablityCheckComponent,
-    LoginComponent
+    LoginComponent,
+    RawmaterialSupplierComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
