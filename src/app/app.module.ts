@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,11 @@ import { YellowOrderCComponent } from './componentSupplier/yellow-order-c/yellow
 import { RedOrderCComponent } from './componentSupplier/red-order-c/red-order-c.component';
 import { AvailabilityCheckCComponent } from './componentSupplier/availability-check-c/availability-check-c.component';
 import { OrderHistoryCComponent } from './componentSupplier/order-history-c/order-history-c.component';
+import { skfOrderService } from './services/skf-order.service';
+import { SkfOrderClass } from './classes/skf-order-schema';
+// import { injectInjector } from '@angular/core/src/render3/di';
+import { Observable } from 'rxjs';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
@@ -60,8 +65,9 @@ const appRoutes : Routes =[
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-  ],
-  providers: [],
+    HttpClientModule
+    ],
+  providers: [skfOrderService, SkfOrderClass],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
