@@ -11,7 +11,7 @@
           <ul class="nav navbar-nav" >
               <li class="menu-item-has-children dropdown"
               *ngFor = "let d of navbarData">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class={{d.icon}}></i>{{d.title}}</a>
+                  <a routerLink={{d.link}} class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class={{d.icon}}></i>{{d.title}}</a>
               </li>
           </ul>
       </div><!-- /.navbar-collapse -->
