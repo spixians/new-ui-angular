@@ -28,7 +28,8 @@ import { OrderHistoryCComponent } from './componentSupplier/order-history-c/orde
 
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 const appRoutes : Routes =[
-  {path: 'skf', component: SkfComponent}
+  {path: 'skf/dashboard', component: DashboardComponent}
+  // import { DashboardComponent } from './skf/dashboard/dashboard.component';
 ];
 @NgModule({
   declarations: [

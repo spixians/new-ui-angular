@@ -10,6 +10,15 @@ import { OrderHistoryComponent } from './skf/order-history/order-history.compone
 import { PlaceOrderComponent } from './skf/place-order/place-order.component';
 
 
+import { DashboardCComponent } from './componentSupplier/dashboard-c/dashboard-c.component';
+import { ComponentSupplierComponent } from './componentSupplier/component-supplier.component';
+import { RedOrderCComponent } from './componentSupplier/red-order-c/red-order-c.component';
+import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
+import { YellowOrderCComponent } from './componentSupplier/yellow-order-c/yellow-order-c.component';
+import { OrderHistoryCComponent } from './componentSupplier/order-history-c/order-history-c.component';
+import { PlaceOrderCComponent } from './componentSupplier/place-order-c/place-order-c.component';
+
+
 
 
 const appRoutes: Routes = [
@@ -21,10 +30,25 @@ const appRoutes: Routes = [
     {path: 'yellow-order-list',  component:YellowOrderListComponent},
     {path: 'order-history',  component:OrderHistoryComponent},
     {path: 'place-order',  component:PlaceOrderComponent},
-    {path: 'yellow-order-list',  component:YellowOrderListComponent},
+    
 
 
- ]}
+ ]},
+
+ {path: 'componentSupplier',  component:ComponentSupplierComponent ,children:[
+  {path: 'dasboard-c',  component:DashboardCComponent},
+  {path: 'green-order-c',  component:GreenOrderCComponent},
+  {path: 'red-order-c',  component:RedOrderCComponent},
+  {path: 'yellow-order-c',  component:YellowOrderCComponent},
+  {path: 'order-history-c',  component:OrderHistoryCComponent},
+  {path: 'place-order-c',  component:PlaceOrderCComponent},
+  
+
+
+]}
+
+
+
 ];
 
 @NgModule({
