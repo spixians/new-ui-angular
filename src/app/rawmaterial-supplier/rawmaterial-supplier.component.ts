@@ -14,31 +14,31 @@ export class RawmaterialSupplierComponent implements OnInit {
 
   navbarData: Array<{
     title: string,
-    icon : string }> =[
+    icon : string,
+  link:String }> =[
       {
         title: "Dashboard",
-        icon: "menu-icon fa fa-laptop"
+        icon: "menu-icon fa fa-laptop",
+        link: "/rawmaterial-supplier/dashboard-r"
+        
       },{
-        title:"Demand Estimation",
-        icon : "menu-icon fa fa-bar-chart"
+        title:"Add Inventory",
+        icon : "menu-icon fa fa-bar-chart",
+        link:"/rawmaterial-supplier/addinventory"
       },{
-        title:"Place Order",
-        icon : "menu-icon fa fa-tasks"
-      },{
-        title:"Green Orders",
-        icon : "menu-icon fa fa-th"
-      },{
-        title:"Yellow Orders",
-        icon : "menu-icon fa fa-th"
-      },{
-        title:"Red Orders",
-        icon : "menu-icon fa fa-th"
-      },{
-        title:"Availability Check",
-        icon : "menu-icon fa fa-table"
-      },{
-        title:"Order History",
-        icon : "menu-icon fa fa-list-alt"
+        title:"Track Inventory",
+        icon : "menu-icon fa fa-tasks",
+        link:"/rawmaterial-supplier/trackinventory"
       }
   ]
 }
+
+
+
+
+
+
+
+
+
+

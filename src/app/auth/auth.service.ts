@@ -15,15 +15,30 @@ export class AuthService{
     }
 
 
-    signinUser(email: string, password: string) {
+    signinUser(email: string, password: string, temp: string) {
 
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then(
               
             response => {
-                console.log('hello')
-                this.router.navigate(['/skf/place-order']);
-                console.log("My response" + response);
+                console.log(response);
+                if(temp=="skf")
+                  {
+                    this.router.navigate(['/skf/place-order']);
+                  } 
+                else if(temp=="componentsupplier")
+                {
+                  this.router.navigate(['/componentSupplier/dashboard-c']);
+                }
+                else if(temp=="rawmaterial")
+                {
+                  this.router.navigate(['/rawmaterial-supplier/dashboard-r']);
+                }
+                else 
+                {
+                  this.router.navigate(['/signin']);
+                }
+                //console.log("My response" + response);
             }
           )
           .catch(

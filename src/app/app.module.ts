@@ -32,6 +32,9 @@ import { AuthService} from './auth/auth.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { DashboardRComponent } from './rawmaterial-supplier/dashboard-r/dashboard-r.component';
+import { TrackinventoryComponent } from './rawmaterial-supplier/trackinventory/trackinventory.component';
+import { AddinventoryComponent } from './rawmaterial-supplier/addinventory/addinventory.component';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
@@ -61,7 +64,10 @@ import { SigninComponent } from './auth/signin/signin.component';
     AvailabilityCheckCComponent,
     OrderHistoryCComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    DashboardRComponent,
+    TrackinventoryComponent,
+    AddinventoryComponent
   ],
   imports: [
     BrowserModule,

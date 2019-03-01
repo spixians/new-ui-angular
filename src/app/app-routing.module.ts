@@ -19,7 +19,10 @@ import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-or
 import { YellowOrderCComponent } from './componentSupplier/yellow-order-c/yellow-order-c.component';
 import { OrderHistoryCComponent } from './componentSupplier/order-history-c/order-history-c.component';
 import { PlaceOrderCComponent } from './componentSupplier/place-order-c/place-order-c.component';
-
+import { RawmaterialSupplierComponent } from './rawmaterial-supplier/rawmaterial-supplier.component';
+import { DashboardRComponent } from './rawmaterial-supplier/dashboard-r/dashboard-r.component';
+import { AddinventoryComponent } from './rawmaterial-supplier/addinventory/addinventory.component';
+import { TrackinventoryComponent } from './rawmaterial-supplier/trackinventory/trackinventory.component';
 
 
 
@@ -39,7 +42,7 @@ const appRoutes: Routes = [
  ]},
 
  {path: 'componentSupplier',  component:ComponentSupplierComponent ,children:[
-  {path: 'dasboard-c',  component:DashboardCComponent},
+  {path: 'dashboard-c',  component:DashboardCComponent},
   {path: 'green-order-c',  component:GreenOrderCComponent},
   {path: 'red-order-c',  component:RedOrderCComponent},
   {path: 'yellow-order-c',  component:YellowOrderCComponent},
@@ -49,9 +52,20 @@ const appRoutes: Routes = [
 
 
 ]},
+
+
+{path: 'rawmaterial-supplier',  component:RawmaterialSupplierComponent ,children:[
+  {path: 'dashboard-r',  component:DashboardRComponent},
+  {path: 'addinventory',  component:AddinventoryComponent},
+  {path: 'trackinventory',  component:TrackinventoryComponent},
+  
+  
+
+
+]},
 {path: 'signup',  component:SignupComponent},
 {path: 'signin',  component:SigninComponent},
-
+{path: 'rawmaterial-supplier',  component:RawmaterialSupplierComponent},
 
 
 ];

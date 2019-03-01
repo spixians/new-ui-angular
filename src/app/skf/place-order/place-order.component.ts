@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm ,NgModel } from '@angular/forms';
+import { SkfOrderClass } from 'src/app/classes/skf-order-schema';
+import { skfOrderService } from '../../services/skf-order.service'
 
 @Component({
   selector: 'app-place-order',
@@ -9,7 +11,8 @@ import { NgForm ,NgModel } from '@angular/forms';
 export class PlaceOrderComponent implements OnInit {
 
   @ViewChild('f') placeorder : NgForm
-  constructor() { }
+  constructor(private SkfOrderService : skfOrderService,      
+    ) { }
 
   ngOnInit() {
   }
@@ -30,7 +33,7 @@ export class PlaceOrderComponent implements OnInit {
 
   onSubmit(form : NgForm){
     console.log(this.placeorder)
-    this.user.amount = this.placeorder.value.amount
+    this.user.amount = this.placeorder.value.quantity * this.placeorder.value.price
     this.user.batches = this.placeorder.value.batches
     this.user.component= this.placeorder.value.component
     this.user.componentType= this.placeorder.value.componentType
@@ -38,7 +41,31 @@ export class PlaceOrderComponent implements OnInit {
     this.user.quantity = this.placeorder.value.quantity
     this.user.supplier = this.placeorder.value.supplier
     this.user.price = this.placeorder.value.price
-    console.log(this.user)
+    console.log(`User  =  ${this.user.amount}`)
+
+
+    //POST TO API
+    var d=new SkfOrderClass()
+
+    d.amount=this.placeorder.value.amount
+    d.batches =this.placeorder.value.batches
+    d.component=this.placeorder.value.component
+    d.componentType=this.placeorder.value.componentType
+    d.expectedDate=this.placeorder.value.expectedDate
+    d.quantity=this.placeorder.value.quantity
+    d.supplier=this.placeorder.value.supplier
+    d.price=this.placeorder.value.price
+    d.deliveryMode=this.placeorder.value.deliveryMode
+
+    console.log(d.amount)
+
+    this.SkfOrderService.postSkfOrder(d)
+    .subscribe(
+      data=>{
+        console.log(data)
+      }
+    )
+    
   }
 
 

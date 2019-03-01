@@ -8,6 +8,7 @@ export class SkfOrderClass{
     component: string
     componentType: string
     expectedDate: string
+    orderDate: string
     supplier: string
     deliveryMode : string
     __v: number
