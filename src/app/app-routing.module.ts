@@ -23,6 +23,9 @@ import { RawmaterialSupplierComponent } from './rawmaterial-supplier/rawmaterial
 import { DashboardRComponent } from './rawmaterial-supplier/dashboard-r/dashboard-r.component';
 import { AddinventoryComponent } from './rawmaterial-supplier/addinventory/addinventory.component';
 import { TrackinventoryComponent } from './rawmaterial-supplier/trackinventory/trackinventory.component';
+import { InventoryskfComponent } from './skf/inventoryskf/inventoryskf.component';
+import { DelaysskfComponent } from './skf/delaysskf/delaysskf.component';
+import { InventorycsComponent } from './componentSupplier/inventorycs/inventorycs.component';
 
 
 
@@ -35,6 +38,8 @@ const appRoutes: Routes = [
     {path: 'yellow-order-list',  component:YellowOrderListComponent},
     {path: 'order-history',  component:OrderHistoryComponent},
     {path: 'place-order',  component:PlaceOrderComponent},
+    {path: 'inventoryskf',  component:InventoryskfComponent},
+    {path: 'delaysskf',  component:DelaysskfComponent},
   
     
 
@@ -48,6 +53,7 @@ const appRoutes: Routes = [
   {path: 'yellow-order-c',  component:YellowOrderCComponent},
   {path: 'order-history-c',  component:OrderHistoryCComponent},
   {path: 'place-order-c',  component:PlaceOrderCComponent},
+  {path: 'inventorycs',  component:InventorycsComponent}
   
 
 

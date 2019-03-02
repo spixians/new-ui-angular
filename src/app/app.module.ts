@@ -35,6 +35,10 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { DashboardRComponent } from './rawmaterial-supplier/dashboard-r/dashboard-r.component';
 import { TrackinventoryComponent } from './rawmaterial-supplier/trackinventory/trackinventory.component';
 import { AddinventoryComponent } from './rawmaterial-supplier/addinventory/addinventory.component';
+import { InventoryskfComponent } from './skf/inventoryskf/inventoryskf.component';
+import { DelaysskfComponent } from './skf/delaysskf/delaysskf.component';
+
+import { InventorycsComponent } from './componentSupplier/inventorycs/inventorycs.component';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
@@ -67,7 +71,10 @@ import { AddinventoryComponent } from './rawmaterial-supplier/addinventory/addin
     SigninComponent,
     DashboardRComponent,
     TrackinventoryComponent,
-    AddinventoryComponent
+    AddinventoryComponent,
+    InventoryskfComponent,
+    DelaysskfComponent,
+    InventorycsComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +83,7 @@ import { AddinventoryComponent } from './rawmaterial-supplier/addinventory/addin
     // RouterModule.forRoot(),
     HttpClientModule
     ],
-  providers: [skfOrderService, SkfOrderClass,AuthService ],
+  providers: [skfOrderService, SkfOrderClass,AuthService , ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

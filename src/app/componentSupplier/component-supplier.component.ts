@@ -44,6 +44,11 @@ export class ComponentSupplierComponent implements OnInit {
         title:"Order History",
         icon : "menu-icon fa fa-list-alt",
         link: "/componentSupplier/oerder-history-c"
+      },
+      {
+        title:"Inventory",
+        icon : "menu-icon fa fa-list-alt",
+        link: "/componentSupplier/inventorycs"
       }
   ]
 }

@@ -11,6 +11,7 @@ export class SkfOrderClass{
     orderDate: string
     supplier: string
     deliveryMode : string
+    dispatchStatus : string
     __v: number
     
     

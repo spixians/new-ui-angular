@@ -1,12 +1,58 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4">
-            <br>
-            <br><br><br><br><br><br>
-            <p>component dashboard works</p>
+<div class="row" *ngFor="let d of orderData">
+        <div class="col-md-10">
+                   <div class="card">
+                       <div class="card-header bg-secondary">
+                           <strong class="card-title text-light">ORDER</strong>
+                       </div>
+                       <div class="card-body text-black bg-success">
+                          
+                                   
+                                     <p>batches         :{{d.batches}} </p>
+                                     <p>quantity        :{{d.quantity}} </p>
+                                     <p> component      :{{d.component}} </p>
+                                     <p> componentType  :{{d.componentType}} </p>
+                                     <p> expectedDate   :{{d.expectedDate}} </p>
+                                     <p> orderDate      :{{d.orderDate}} </p>
+                                     <p> supplier       :{{d.supplier}} </p>
+                                     <p> deliveryMode   :{{d.deliveryMode}} </p>
+                                     <!-- <p> dispatchStatus :{{d.dispatchStatus}} </p> -->
 
-        </div>
-    </div>
+                               <br>
+                               <button class="btn" (click)="onsubmit(d.component,d.quantity)" >Process Order</button>      
+                                 
+
+                       </div>
+                   </div>
+               </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

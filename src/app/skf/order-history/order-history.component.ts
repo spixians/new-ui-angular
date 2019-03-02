@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { SkfOrderClass } from 'src/app/classes/skf-order-schema';
 import { skfOrderService } from 'src/app/services/skf-order.service';
 
@@ -7,9 +7,12 @@ import { skfOrderService } from 'src/app/services/skf-order.service';
   templateUrl: './order-history.component.html',
   styleUrls: ['./order-history.component.css']
 })
+
+
 export class OrderHistoryComponent implements OnInit {
 
   orderData : SkfOrderClass  
+  order1 : SkfOrderClass  
 
   constructor(private skfOrder : skfOrderService ,
               private skfSchema : SkfOrderClass ) { 
@@ -20,8 +23,11 @@ export class OrderHistoryComponent implements OnInit {
       data=>{
         this.orderData=data
         console.log(this.orderData)
+
       }
     )
+    this.order1=this.orderData
+    
 
   }
 

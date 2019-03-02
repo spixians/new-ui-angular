@@ -48,6 +48,14 @@ export class SkfComponent implements OnInit {
         title:"Order History",
         icon : "menu-icon fa fa-list-alt",
         link: "/skf/order-history"
+      },{
+        title:"Inventory",
+        icon : "menu-icon fa fa-list-alt",
+        link: "/skf/inventoryskf"
+      },{
+        title:"Delays",
+        icon : "menu-icon fa fa-list-alt",
+        link: "/skf/delaysskf"
       }
   ]
 }

@@ -2,134 +2,21 @@
 
           
 
-          <div class="row">
+<div class="row" *ngFor="let d of InData">
+         <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-header bg-secondary">
+                            <strong class="card-title text-light">ORDER ID: {{d.oid}}</strong>
+                        </div>
+                        <div class="card-body text-black bg-success">
+                            <p>COMPONENT :{{d.componenttname}}</p>
+                            <p>QUANTITY :{{d.quantity}}</p>
+                            <p>ETA :{{d.date}}</p>
 
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
-            
-          <div class="row">
-
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
-
-          <div class="row">
-
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
-
-
-          <div class="row">
-
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
-          <div class="row">
-
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
-
-
-          <div class="row">
-
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
-
-          <div class="row">
-
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
-
-          <div class="row">
-
-
-
-              <div class="col-md-10">
-                  <div class="card">
-                      <div class="card-header bg-secondary">
-                          <strong class="card-title text-light">Card Header</strong>
-                      </div>
-                      <div class="card-body text-white bg-success">
-                          <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row -->
+                        </div>
+                    </div>
+                </div>
+</div>
 
 
 
@@ -137,3 +24,6 @@
 
 
 
+
+
+         
