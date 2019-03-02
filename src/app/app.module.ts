@@ -39,6 +39,7 @@ import { InventoryskfComponent } from './skf/inventoryskf/inventoryskf.component
 import { DelaysskfComponent } from './skf/delaysskf/delaysskf.component';
 
 import { InventorycsComponent } from './componentSupplier/inventorycs/inventorycs.component';
+import { ViewordersComponent } from './skf/vieworders/vieworders.component';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
@@ -74,7 +75,8 @@ import { InventorycsComponent } from './componentSupplier/inventorycs/inventoryc
     AddinventoryComponent,
     InventoryskfComponent,
     DelaysskfComponent,
-    InventorycsComponent
+    InventorycsComponent,
+    ViewordersComponent
   ],
   imports: [
     BrowserModule,

@@ -26,12 +26,13 @@ import { TrackinventoryComponent } from './rawmaterial-supplier/trackinventory/t
 import { InventoryskfComponent } from './skf/inventoryskf/inventoryskf.component';
 import { DelaysskfComponent } from './skf/delaysskf/delaysskf.component';
 import { InventorycsComponent } from './componentSupplier/inventorycs/inventorycs.component';
+import { ViewordersComponent } from './skf/vieworders/vieworders.component';
 
 
 
 const appRoutes: Routes = [
   {path: 'skf',  component:SkfComponent ,children:[
-    {path: 'dasboard',  component:DashboardComponent},
+    {path: 'dashboard',  component:DashboardComponent},
     {path: 'demand-estimation',  component:DemandEstimationComponent},
     {path: 'green-order-list',  component:GreenOrderListComponent},
     {path: 'red-order-list',  component:RedOrderListComponent},
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
     {path: 'place-order',  component:PlaceOrderComponent},
     {path: 'inventoryskf',  component:InventoryskfComponent},
     {path: 'delaysskf',  component:DelaysskfComponent},
+    {path: 'vieworders/:Component',  component:ViewordersComponent},
   
     
 
