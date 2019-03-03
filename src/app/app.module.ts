@@ -55,6 +55,8 @@ import {DemandService} from './services/demand.service';
 import { RmviewComponent } from './rawmaterial-supplier/rmview/rmview.component';
 import { NotificationComponent } from './notification/notification.component';
 import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
+import { CsinventService } from './services/csinvent.service';
+import { Csinvent } from './classes/csinvent';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
   // import { DashboardComponent } from './skf/dashboard/dashboard.component';
@@ -105,7 +107,7 @@ import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-or
     // RouterModule.forRoot(),
     HttpClientModule
     ],
-  providers: [skfOrderService, SkfOrderClass,AuthService ,DemandClass, PostDemandClass, DemandService ,ColorTrackClass, colorTrackService],
+  providers: [skfOrderService, SkfOrderClass,AuthService ,DemandClass, PostDemandClass, DemandService ,ColorTrackClass, colorTrackService, Csinvent ,CsinventService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

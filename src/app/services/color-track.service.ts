@@ -16,4 +16,10 @@ export class colorTrackService{
      getview(compno : number) : Observable <any>{
         return this.httpclient.get("https://cors-anywhere.herokuapp.com/https://fathomless-forest-98790.herokuapp.com/color-track/"+ compno );
     }
+
+
+
+    getviewss(compname : string, comptype: string) : Observable <any>{
+        return this.httpclient.get("https://cors-anywhere.herokuapp.com/https://fathomless-forest-98790.herokuapp.com/color-track/"+ compname+"/"+comptype );
+    }
 }

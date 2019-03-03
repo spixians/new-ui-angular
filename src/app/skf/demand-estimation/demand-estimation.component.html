@@ -10,14 +10,14 @@
                 <div class="col-md-10">
                     
                   
-                        <div class="card border border-secondary">
+                        <div class="card border border-secondary"  >
                             
                             <div class="card-header">
                               
                                 <strong>Demand Estimation</strong> 
                             </div>
                             <div class="card-body card-block">
-                                <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                <form  class="form-horizontal" (ngSubmit)="onSubmit()" #f="ngForm">
 
                                     
 <!-- started from here -->
@@ -27,7 +27,7 @@
                                     <div class="row form-group">
                                             <div class="col col-md-3"><label for="Supplier" class=" form-control-label">Supplier</label></div>
                                             <div class="col-12 col-md-9">
-                                                <select name="Supplier" id="Supplier" class="form-control">
+                                                <select name="Supplier" id="Supplier" class="form-control" ngModel required>
                                                     <option value="0">Please select </option>
                                                     <option value="pramod">pramod </option>
                                                     <option value="raju">raju</option>
@@ -38,18 +38,18 @@
 
                                         <div class="row form-group">
                                                 <div class="col col-md-3"><label for="yvolume" class=" form-control-label">yvolume</label></div>
-                                                <div class="col-12 col-md-9"><input type="number" id="yvolume" name="yvolume" placeholder="Enter Yearly Volume" class="form-control"></div>
+                                                <div class="col-12 col-md-9"><input type="number" id="yvolume" name="yvolume" placeholder="Enter Yearly Volume" class="form-control" ngModel required></div>
                                             </div>
 
                                             <div class="row form-group">
                                                     <div class="col col-md-3"><label for="frequency" class=" form-control-label">frequency</label></div>
-                                                    <div class="col-12 col-md-9"><input type="number" id="frequency" name="frequency" placeholder="Enter frequency" class="form-control"></div>
+                                                    <div class="col-12 col-md-9"><input type="number" id="frequency" name="frequency" placeholder="Enter frequency" class="form-control" ngModel required></div>
                                                 </div>
     
                                                 <div class="row form-group">
                                                         <div class="col col-md-3"><label for="Mode" class=" form-control-label">Mode</label></div>
                                                         <div class="col-12 col-md-9">
-                                                            <select name="Mode" id="Mode" class="form-control">
+                                                            <select name="Mode" id="Mode" class="form-control" ngModel required >
                                                                     <option value="0">Please select </option>
                                                                 <option value="1">A</option>
                                                                 <option value="2">B</option>
@@ -62,7 +62,7 @@
                                                     <div class="row form-group">
                                                         <div class="col col-md-3"><label for="Component" class=" form-control-label">Component</label></div>
                                                         <div class="col-12 col-md-9">
-                                                            <select name="Component" id="Component" class="form-control">
+                                                            <select name="Component" id="Component" class="form-control" ngModel required >
                                                                     <option value="0">Please select </option>
                                                                 <option value="InnerRing">InnerRing</option>
                                                                 <option value="OuterRing">OuterRing</option>
@@ -91,19 +91,19 @@
 
                                                     <div class="row form-group">
                                                             <div class="col col-md-3"><label for="replleadtime" class=" form-control-label">replleadtime</label></div>
-                                                            <div class="col-12 col-md-9"><input type="number" id="replleadtime" name="replleadtime" placeholder="Enter replleadtime" class="form-control"></div>
+                                                            <div class="col-12 col-md-9"><input type="number" id="replleadtime" name="replleadtime" placeholder="Enter replleadtime" class="form-control" ngModel required></div>
                                                         </div>
 
 
                                                         <div class="row form-group">
                                                                 <div class="col col-md-3"><label for="callofidt" class=" form-control-label">callofidt</label></div>
-                                                                <div class="col-12 col-md-9"><input type="number" id="callofidt" name="callofidt" placeholder="Enter callofidt" class="form-control"></div>
+                                                                <div class="col-12 col-md-9"><input type="number" id="callofidt" name="callofidt" placeholder="Enter callofidt" class="form-control" ngModel required></div>
                                                             </div>
 
                      
                                                             <div class="row form-group">
                                                                     <div class="col col-md-3"><label for="date" class=" form-control-label">date</label></div>
-                                                                    <div class="col-12 col-md-9"><input type="date" id="date" name="date" placeholder="Enter date" class="form-control"></div>
+                                                                    <div class="col-12 col-md-9"><input type="date" id="date" name="date" placeholder="Enter date" class="form-control" ngModel required></div>
                                                                 </div>
 
                                                                 

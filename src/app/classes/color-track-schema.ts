@@ -7,6 +7,6 @@ export class ColorTrackClass{
     suppyname:string
     rt:number
     frequency:number
-    
+    cssinvent:number
     
 }
