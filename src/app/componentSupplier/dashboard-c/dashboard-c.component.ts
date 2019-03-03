@@ -1,43 +1,71 @@
-import { Component, OnInit, Injectable } from '@angular/core';
-import { OrderHistoryComponent } from '../../skf/order-history/order-history.component';
-import { skfOrderService } from 'src/app/services/skf-order.service';
-import { SkfOrderClass } from 'src/app/classes/skf-order-schema';
-
-
-
-
+import { Component , OnInit ,ViewChild} from '@angular/core';
+import { NgForm } from '@angular/forms'
+import * as CanvasJS from './canvasjs.min';
+import { DemandClass, PostDemandClass } from '../../classes/demand-class';
+import { DemandService } from '../../services/demand.service';
+// import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-dashboard-c',
+  selector: 'dashboard-c',
   templateUrl: './dashboard-c.component.html',
   styleUrls: ['./dashboard-c.component.css']
 })
+export class DashboardcComponent implements OnInit {
 
-export class DashboardCComponent implements OnInit {
+  @ViewChild('f') placeorder : NgForm
 
-  orderData : SkfOrderClass  
+  constructor(
+    private DemandService : DemandService,
+    // private PostDemandClass : PostDemandClass
+  ){
+   
+  }
+  rdata : Array<{ y: number , label:string }> = []
 
-
-  constructor(private skfOrder : skfOrderService ,
-    private skfSchema : SkfOrderClass ) { 
-      this.skfOrder.getSkfOrdersForCS("pramod")
-      .subscribe(
-        data=>{
-          this.orderData=data
-          console.log("hello")
-          console.log(this.orderData)
-        }
-      )
+	ngOnInit() {
+  // chart.render();
     }
 
-  ngOnInit() {
-  }
-
-  
-
-  
-
-  onsubmit(component :string,quantity :number){
     
-  }
+
+   
+    
+
+    onSubmit(){
+      var d= new PostDemandClass()
+      // console.log(typeof this.placeorder.value.year )
+      d.input=this.placeorder.value.year;
+
+      this.DemandService.postDemand(d)
+    .subscribe(
+      data=>{
+          // console.log(data)
+          this.rdata=[]
+          for(let d in data){
+            console.log(data[d].SaleFigure , data[d].Month )
+            this.rdata.push({ y: data[d].SaleFigure , label : data[d].Month })
+          }
+          console.log("hi")
+
+          let chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            exportEnabled: true,
+            title: {
+              text: "Demand forecast"
+            },
+            data: [{
+              type: "column",
+              dataPoints: this.rdata
+        
+            }]
+          });
+
+          chart.render();
+      }
+    )
+    }
+
+    setYear(event: any ){
+      event.target.value
+    }
 }
