@@ -48,6 +48,8 @@ import { OrderTableComponent } from './componentSupplier/order-table/order-table
 import { ViewordersComponent } from './skf/vieworders/vieworders.component';
 import { Page1Component } from './skf/page1/page1.component';
 import { Page2Component } from './skf/page2/page2.component';
+import { ColorTrackClass } from './classes/color-track-schema';
+import { colorTrackService } from './services/color-track.service';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 import {DemandService} from './services/demand.service';
 import { RmviewComponent } from './rawmaterial-supplier/rmview/rmview.component';
@@ -99,7 +101,7 @@ import { NotificationComponent } from './notification/notification.component';
     // RouterModule.forRoot(),
     HttpClientModule
     ],
-  providers: [skfOrderService, SkfOrderClass,AuthService ,DemandClass, PostDemandClass, DemandService ],
+  providers: [skfOrderService, SkfOrderClass,AuthService ,DemandClass, PostDemandClass, DemandService ,ColorTrackClass, colorTrackService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

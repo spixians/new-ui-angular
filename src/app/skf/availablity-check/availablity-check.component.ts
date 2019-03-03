@@ -7,6 +7,7 @@ import { NgForm ,NgModel } from '@angular/forms';
   templateUrl: './availablity-check.component.html',
   styleUrls: ['./availablity-check.component.css']
 })
+
 export class AvailablityCheckComponent implements OnInit {
 
   
