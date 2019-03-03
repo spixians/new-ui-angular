@@ -31,7 +31,7 @@ export class SkfComponent implements OnInit {
       },{
         title:"Availability Check",
         icon : "menu-icon fa fa-table",
-        link: "/skf/availability-check"
+        link: "/skf/availablity-check"
       },{
         title:"Order History",
         icon : "menu-icon fa fa-list-alt",

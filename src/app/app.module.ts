@@ -83,6 +83,7 @@ import { colorTrackService } from './services/color-track.service';
     ViewordersComponent,
     Page1Component,
     Page2Component
+    
   ],
   imports: [
     BrowserModule,

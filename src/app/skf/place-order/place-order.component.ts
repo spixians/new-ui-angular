@@ -47,7 +47,7 @@ export class PlaceOrderComponent implements OnInit {
     //POST TO API
     var d=new SkfOrderClass()
 
-    d.amount=this.placeorder.value.amount
+    d.amount=this.placeorder.value.price * this.placeorder.value.quantity
     d.batches =this.placeorder.value.batches
     d.component=this.placeorder.value.component
     d.componentType=this.placeorder.value.componentType
@@ -62,7 +62,7 @@ export class PlaceOrderComponent implements OnInit {
     this.SkfOrderService.postSkfOrder(d)
     .subscribe(
       data=>{
-        console.log(data)
+        console.log("successful")
       }
     )
     

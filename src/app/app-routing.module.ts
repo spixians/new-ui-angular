@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     {path: 'demand-estimation',  component:DemandEstimationComponent},
     {path: 'green-order-list',  component:GreenOrderListComponent},
     {path: 'red-order-list',  component:RedOrderListComponent},
-    {path: 'availability-check',  component:AvailablityCheckComponent},
+    {path: 'availablity-check',  component:AvailablityCheckComponent},
     {path: 'order-history',  component:OrderHistoryComponent},
     {path: 'place-order',  component:PlaceOrderComponent},
     {path: 'inventoryskf',  component:InventoryskfComponent},

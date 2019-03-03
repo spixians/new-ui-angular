@@ -18,7 +18,7 @@ export class Page1Component implements OnInit {
     
     this.num=this._Activatedroute.snapshot.params['var'];
 
-
+      console.log(this.num)
     console.log('hi');
     this.colorTrack.getview(this.num)
     .subscribe(
