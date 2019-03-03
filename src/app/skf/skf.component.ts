@@ -17,10 +17,6 @@ export class SkfComponent implements OnInit {
     icon : string,
     link:string }> =[
       {
-        title: "Dashboard",
-        icon: "menu-icon fa fa-laptop",
-        link: "/skf/dashboard"
-      },{
         title:"Demand Estimation",
         icon : "menu-icon fa fa-bar-chart",
         link: "/skf/demand-estimation"
@@ -29,7 +25,7 @@ export class SkfComponent implements OnInit {
         icon : "menu-icon fa fa-tasks",
         link: "/skf/place-order"
       },{
-        title:"Availability Check",
+        title:"Trace Order",
         icon : "menu-icon fa fa-table",
         link: "/skf/availablity-check"
       },{
@@ -40,10 +36,6 @@ export class SkfComponent implements OnInit {
         title:"Inventory",
         icon : "menu-icon fa fa-list-alt",
         link: "/skf/inventoryskf"
-      },{
-        title:"Delays",
-        icon : "menu-icon fa fa-list-alt",
-        link: "/skf/delaysskf"
       }
   ]
 }

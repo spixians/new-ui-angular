@@ -41,3 +41,9 @@ b, strong {
     margin-left: 200px;
 
 }
+
+
+b[_ngcontent-c2], strong[_ngcontent-c2] {
+    font-weight: bolder;
+    margin-left: 322px;
+}
