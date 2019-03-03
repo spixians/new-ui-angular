@@ -17,8 +17,8 @@ getSkfOrdersForCS(supplier : string) : Observable <any>{
     return this.httpclient.get("https://cors-anywhere.herokuapp.com/https://fathomless-forest-98790.herokuapp.com/place-order/"+ supplier );
 }
 
-getSkfordersview(Component : number) : Observable <any>{
-    return this.httpclient.get("https://cors-anywhere.herokuapp.com/https://fathomless-forest-98790.herokuapp.com/place-order/"+ Component );
+getSkfordersview(Component : string) : Observable <any>{
+    return this.httpclient.get("https://cors-anywhere.herokuapp.com/https://fathomless-forest-98790.herokuapp.com/demand/"+ Component );
 }
 
 

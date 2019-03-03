@@ -10,7 +10,7 @@ import { ValueConverter } from '@angular/compiler/src/render3/view/template';
   styleUrls: ['./vieworders.component.css']
 })
 export class ViewordersComponent implements OnInit {
-  value:number;
+  value:string;
   orderData : SkfOrderClass 
   constructor(private skfOrder : skfOrderService ,
     private skfSchema : SkfOrderClass ,private _Activatedroute:ActivatedRoute) { 

@@ -29,21 +29,9 @@ export class SkfComponent implements OnInit {
         icon : "menu-icon fa fa-tasks",
         link: "/skf/place-order"
       },{
-        title:"Green Orders",
-        icon : "menu-icon fa fa-th",
-        link: "/skf/green-order-list"
-      },{
-        title:"Yellow Orders",
-        icon : "menu-icon fa fa-th",
-        link: "/skf/yellow-order-list"
-      },{
-        title:"Red Orders",
-        icon : "menu-icon fa fa-th",
-        link: "/skf/red-order-list"
-      },{
         title:"Availability Check",
         icon : "menu-icon fa fa-table",
-        link: "/skf/dashboard"
+        link: "/skf/availability-check"
       },{
         title:"Order History",
         icon : "menu-icon fa fa-list-alt",

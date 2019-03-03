@@ -20,7 +20,7 @@ export class PlaceOrderComponent implements OnInit {
   user= {
     amount: 0,
     batches: 0,
-    component: "",
+    component: 0,
     componentType: "",
     expectedDate: "",
     price: 0,

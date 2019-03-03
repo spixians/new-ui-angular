@@ -5,7 +5,7 @@ export class SkfOrderClass{
     price: number
     quantity: number
     _id: string
-    component: string
+    component: number
     componentType: string
     expectedDate: string
     orderDate: string

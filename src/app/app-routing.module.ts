@@ -27,6 +27,10 @@ import { InventoryskfComponent } from './skf/inventoryskf/inventoryskf.component
 import { DelaysskfComponent } from './skf/delaysskf/delaysskf.component';
 import { InventorycsComponent } from './componentSupplier/inventorycs/inventorycs.component';
 import { ViewordersComponent } from './skf/vieworders/vieworders.component';
+import { AvailabilityCheckCComponent } from './componentSupplier/availability-check-c/availability-check-c.component';
+import { AvailablityCheckComponent } from './skf/availablity-check/availablity-check.component';
+import { Page1Component } from './skf/page1/page1.component';
+import { Page2Component } from './skf/page2/page2.component';
 
 
 
@@ -36,12 +40,15 @@ const appRoutes: Routes = [
     {path: 'demand-estimation',  component:DemandEstimationComponent},
     {path: 'green-order-list',  component:GreenOrderListComponent},
     {path: 'red-order-list',  component:RedOrderListComponent},
-    {path: 'yellow-order-list',  component:YellowOrderListComponent},
+    {path: 'availability-check',  component:AvailablityCheckComponent},
     {path: 'order-history',  component:OrderHistoryComponent},
     {path: 'place-order',  component:PlaceOrderComponent},
     {path: 'inventoryskf',  component:InventoryskfComponent},
     {path: 'delaysskf',  component:DelaysskfComponent},
     {path: 'vieworders/:Component',  component:ViewordersComponent},
+    {path: 'page1/:var',  component:Page1Component},
+    {path: 'page2',  component:Page2Component},
+
   
     
 
