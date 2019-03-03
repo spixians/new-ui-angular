@@ -4,6 +4,8 @@ import { ColorTrackClass } from "src/app/classes/color-track-schema";
 import { colorTrackService } from 'src/app/services/color-track.service';
 import { RouterLink, Router } from '@angular/router';
 
+import { Csinvent } from 'src/app/classes/csinvent';
+import { checkAndUpdateBinding } from '@angular/core/src/view/util';
 
 @Component({
   selector: 'app-page1',
@@ -11,8 +13,12 @@ import { RouterLink, Router } from '@angular/router';
   styleUrls: ['./page1.component.css']
 })
 export class Page1Component implements OnInit {
+  ngOnInit(){}
  num:number;
+ num1 : Csinvent;
+ 
  orderData: ColorTrackClass
+ order1Data: ColorTrackClass
  
   constructor(private _Activatedroute:ActivatedRoute,private colorTrack : colorTrackService ,
     private colorTrackSchema : ColorTrackClass,
@@ -23,6 +29,16 @@ export class Page1Component implements OnInit {
 
       console.log(this.num)
     console.log('hi');
+
+
+    // this.colorTrack.getviewss("Roller","B")
+    // .subscribe(
+    //   data1=>{
+    //     this.num1=data1
+    //     console.log(data1)
+
+    //   }
+    // )
     this.colorTrack.getview(this.num)
     .subscribe(
       data=>{
@@ -35,23 +51,49 @@ export class Page1Component implements OnInit {
     
    }
 
-   sample(q, f){
-     return q*f
+   colorCheck(val){
+     if (val>0){
+       return "green-color"
+     }else return "yellow-color"
    }
   
-   
+   RedCheck(d){
+    //  console.log(d)
+    //  if(d==2 || d==5 || d==6){
+        
+    //  }
+    return "red-color"
+   }
 
+  //  sample(l,m,n,p){
+     
 
+    
+     
+  //  }
 
-
-  ngOnInit() {
+setTd(a,b,c){
+  if(a > (b/c) ){
+    return "green-color"
+  }else {
+    return "yellow-color"
   }
+}
 
+  
   onsubmit(){
     this.router.navigate(['../skf/s1']);
     
   }
-}
+
+  
+   
+
+  }
+
+
+
+
 
 
 

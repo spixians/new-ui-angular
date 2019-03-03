@@ -60,6 +60,8 @@ import { S2Component } from './skf/s2/s2.component';
 import { S3Component } from './skf/s3/s3.component';
 import { S4Component } from './skf/s4/s4.component';
 import { FeedbackComponent } from './skf/feedback/feedback.component';
+import { CsinventService } from './services/csinvent.service';
+import { Csinvent } from './classes/csinvent';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
   // import { DashboardComponent } from './skf/dashboard/dashboard.component';
@@ -120,7 +122,7 @@ import { FeedbackComponent } from './skf/feedback/feedback.component';
     // RouterModule.forRoot(),
     HttpClientModule
     ],
-  providers: [skfOrderService, SkfOrderClass,AuthService ,DemandClass, PostDemandClass, DemandService ,ColorTrackClass, colorTrackService],
+  providers: [skfOrderService, SkfOrderClass,AuthService ,DemandClass, PostDemandClass, DemandService ,ColorTrackClass, colorTrackService, Csinvent ,CsinventService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
