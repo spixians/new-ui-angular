@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { RouterLink, Router } from '@angular/router';
 @Component({
   selector: 'order-table',
   templateUrl: './order-table.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router ) { }
 
   ngOnInit() {
   }
@@ -16,6 +16,12 @@ export class OrderTableComponent implements OnInit {
   onsubmit(){    
     var person = prompt("Please enter delay in days");
     
+
+
+    
+  }
+  onsubmit1(){    
+    this.router.navigate(['../componentSupplier/place-order-c']);
 
 
     

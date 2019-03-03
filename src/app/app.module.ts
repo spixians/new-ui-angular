@@ -45,6 +45,9 @@ import { PostDemandClass } from './classes/demand-class';
 import { InventorycsComponent } from './componentSupplier/inventorycs/inventorycs.component';
 import { ViewOrderComponent } from './componentSupplier/vieworder/vieworder.component';
 import { OrderTableComponent } from './componentSupplier/order-table/order-table.component';
+import { ViewordersComponent } from './skf/vieworders/vieworders.component';
+import { Page1Component } from './skf/page1/page1.component';
+import { Page2Component } from './skf/page2/page2.component';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 import {DemandService} from './services/demand.service';
 import { RmviewComponent } from './rawmaterial-supplier/rmview/rmview.component';
@@ -81,10 +84,13 @@ import { NotificationComponent } from './notification/notification.component';
     InventoryskfComponent,
     DelaysskfComponent,
     InventorycsComponent,
-    ViewOrderComponent,
+    ViewordersComponent,
     OrderTableComponent,
     RmviewComponent,
-    NotificationComponent
+    NotificationComponent,
+    Page1Component,
+    Page2Component,
+    ViewOrderComponent
   ],
   imports: [
     BrowserModule,

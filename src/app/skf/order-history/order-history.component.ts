@@ -12,7 +12,7 @@ import { skfOrderService } from 'src/app/services/skf-order.service';
 export class OrderHistoryComponent implements OnInit {
 
   orderData : SkfOrderClass  
-  order1 : SkfOrderClass  
+ 
 
   constructor(private skfOrder : skfOrderService ,
               private skfSchema : SkfOrderClass ) { 
@@ -26,7 +26,7 @@ export class OrderHistoryComponent implements OnInit {
 
       }
     )
-    this.order1=this.orderData
+   
     
 
   }

@@ -19,7 +19,7 @@
                             <div class="card-body card-block">
                                 <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
 
-                                 
+                                    
 <!-- started from here -->
                             
 
@@ -60,6 +60,36 @@
 
 
                                                     <div class="row form-group">
+                                                        <div class="col col-md-3"><label for="Component" class=" form-control-label">Component</label></div>
+                                                        <div class="col-12 col-md-9">
+                                                            <select name="Component" id="Component" class="form-control">
+                                                                    <option value="0">Please select </option>
+                                                                <option value="InnerRing">InnerRing</option>
+                                                                <option value="OuterRing">OuterRing</option>
+                                                                <option value="Roller">Roller</option>
+                                                                <option value="Cage">Cage</option>
+                                                                <option value="Lubricant">Lubricant</option>  
+                                                                <option value="Ball">Ball</option>  
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row form-group">
+                                                            <div class="col col-md-3"><label for="comptype" class=" form-control-label">Comp Type</label></div>
+                                                            <div class="col-12 col-md-9">
+                                                                <select name="comptype" id="comptype" class="form-control" ngModel required >
+                                                                    <!-- <option value="0">Please select</option> -->
+                                                                    <option value="A">A</option>
+                                                                    <option value="B">B</option>
+                                                                    
+                                                                   
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+
+                                                    <div class="row form-group">
                                                             <div class="col col-md-3"><label for="replleadtime" class=" form-control-label">replleadtime</label></div>
                                                             <div class="col-12 col-md-9"><input type="number" id="replleadtime" name="replleadtime" placeholder="Enter replleadtime" class="form-control"></div>
                                                         </div>
@@ -91,3 +121,9 @@
          
     </div>
     </div>
+
+
+
+
+
+ 

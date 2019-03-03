@@ -10,7 +10,7 @@
                 <strong>Fill In the order details</strong> 
               </div>
               <div class="card-body card-block">
-                  <form (ngSubmit)="onSubmit()" class="form-horizontal" #f="ngForm" >
+                  <form (ngSubmit)="onSubmit()" class="form-horizontal" #f="NgForm" >
 
                         
                         <div class="row form-group">
@@ -51,7 +51,7 @@
                         <div class="row form-group">
                               <div class="col col-md-3"><label for="amount" class=" form-control-label">Total Transaction Amount</label></div>
                               <div class="col-12 col-md-9"  [(ngModel)]="totalamount" >
-                                  <i class="fas fa-rupee-sign"> {{p*q}} </i>  
+                                <p> {{p*q}} </p>
                               </div>
                         </div>
                         <div class="row form-group">
