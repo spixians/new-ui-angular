@@ -55,6 +55,11 @@ import {DemandService} from './services/demand.service';
 import { RmviewComponent } from './rawmaterial-supplier/rmview/rmview.component';
 import { NotificationComponent } from './notification/notification.component';
 import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
+import { S1Component } from './skf/s1/s1.component';
+import { S2Component } from './skf/s2/s2.component';
+import { S3Component } from './skf/s3/s3.component';
+import { S4Component } from './skf/s4/s4.component';
+import { FeedbackComponent } from './skf/feedback/feedback.component';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
   // import { DashboardComponent } from './skf/dashboard/dashboard.component';
@@ -76,7 +81,7 @@ import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-or
     ComponentSupplierComponent,
     DashboardcComponent,
     PlaceOrderCComponent,
-    
+    S1Component,
     AvailabilityCheckCComponent,
     OrderHistoryCComponent,
     SignupComponent,
@@ -96,7 +101,17 @@ import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-or
     
     ViewOrderComponent,
     
-    GreenOrderCComponent
+    GreenOrderCComponent,
+    
+    S1Component,
+    
+    S2Component,
+    
+    S3Component,
+    
+    S4Component,
+    
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

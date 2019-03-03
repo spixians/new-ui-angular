@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ColorTrackClass } from "src/app/classes/color-track-schema";
 import { colorTrackService } from 'src/app/services/color-track.service';
+import { RouterLink, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-page1',
@@ -13,7 +15,8 @@ export class Page1Component implements OnInit {
  orderData: ColorTrackClass
  
   constructor(private _Activatedroute:ActivatedRoute,private colorTrack : colorTrackService ,
-    private colorTrackSchema : ColorTrackClass) {
+    private colorTrackSchema : ColorTrackClass,
+    private router : Router) {
     
     
     this.num=this._Activatedroute.snapshot.params['var'];
@@ -44,7 +47,10 @@ export class Page1Component implements OnInit {
   ngOnInit() {
   }
 
-
+  onsubmit(){
+    this.router.navigate(['../skf/s1']);
+    
+  }
 }
 
 

@@ -8,7 +8,7 @@ import { NgForm, NgModel } from '@angular/forms';
   styleUrls: ['./place-order-c.component.css']
 })
 export class PlaceOrderCComponent implements OnInit {
-  @ViewChild('f') placeorderform :NgForm; 
+  @ViewChild('f') placeorderform :NgForm
 
   constructor(private _freeApiService: rawService) { }
 

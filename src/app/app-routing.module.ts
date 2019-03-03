@@ -34,7 +34,11 @@ import { OrderHistoryCComponent } from './componentSupplier/order-history-c/orde
 import { RmviewComponent } from './rawmaterial-supplier/rmview/rmview.component';
 import { OrderTableComponent } from './componentSupplier/order-table/order-table.component';
 import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
-
+import { S1Component} from './skf/s1/s1.component';
+import { S2Component} from './skf/s2/s2.component';
+import { S3Component} from './skf/s3/s3.component';
+import { S4Component} from './skf/s4/s4.component';
+import{FeedbackComponent} from './skf/feedback/feedback.component';
 
 
 const appRoutes: Routes = [
@@ -51,6 +55,11 @@ const appRoutes: Routes = [
     {path: 'vieworders/:Component',  component:ViewordersComponent},
     {path: 'page1/:var',  component:Page1Component},
     {path: 'page2',  component:Page2Component},
+    { path: 's1' , component: S1Component},
+    { path: 's2' , component: S2Component},
+    { path: 's3' , component: S3Component},
+    { path: 's4' , component: S4Component},
+    { path: 'feedback' , component: FeedbackComponent}
 
   
     

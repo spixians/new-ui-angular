@@ -1,3 +1,6 @@
+
+
+
 import { Component , OnInit ,ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms'
 import * as CanvasJS from './canvasjs.min';
@@ -6,11 +9,11 @@ import { DemandService } from '../../services/demand.service';
 // import * as $ from 'jquery';
 
 @Component({
-  selector: 'dashboard-c',
-  templateUrl: './dashboard-c.component.html',
-  styleUrls: ['./dashboard-c.component.css']
+  selector: 's2.component',
+  templateUrl: './s2.component.html',
+  styleUrls: ['./s2.component.css']
 })
-export class DashboardcComponent implements OnInit {
+export class S2Component implements OnInit {
 
   @ViewChild('f') placeorder : NgForm
 
@@ -26,10 +29,8 @@ export class DashboardcComponent implements OnInit {
   // chart.render();
     }
 
-    onsubmit(){
-      alert("You have not started the order processing for the month of may.Please do the needful");
-      
-    }
+    
+    
 
    
     
@@ -54,10 +55,10 @@ export class DashboardcComponent implements OnInit {
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: "Demand forecast"
+              text: "Order History with Supplier 2"
             },
             data: [{
-              type: "column",
+              type: "spline",
               dataPoints: this.rdata
         
             }]

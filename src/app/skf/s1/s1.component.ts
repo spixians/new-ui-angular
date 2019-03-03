@@ -4,18 +4,21 @@ import * as CanvasJS from './canvasjs.min';
 import { DemandClass, PostDemandClass } from '../../classes/demand-class';
 import { DemandService } from '../../services/demand.service';
 // import * as $ from 'jquery';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
-  selector: 'dashboard-c',
-  templateUrl: './dashboard-c.component.html',
-  styleUrls: ['./dashboard-c.component.css']
+  selector: 's1.component',
+  templateUrl: './s1.component.html',
+  styleUrls: ['./s1.component.css']
 })
-export class DashboardcComponent implements OnInit {
+export class S1Component implements OnInit {
 
   @ViewChild('f') placeorder : NgForm
 
   constructor(
     private DemandService : DemandService,
+    private router : Router
+
     // private PostDemandClass : PostDemandClass
   ){
    
@@ -27,9 +30,10 @@ export class DashboardcComponent implements OnInit {
     }
 
     onsubmit(){
-      alert("You have not started the order processing for the month of may.Please do the needful");
+      this.router.navigate(['../skf/feedback']);
       
     }
+    
 
    
     
@@ -54,10 +58,10 @@ export class DashboardcComponent implements OnInit {
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: "Demand forecast"
+              text: "Order History with Supplier 1"
             },
             data: [{
-              type: "column",
+              type: "spline",
               dataPoints: this.rdata
         
             }]
