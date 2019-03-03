@@ -1,58 +1,24 @@
-<div class="row" *ngFor="let d of orderData">
-        <div class="col-md-10">
-                   <div class="card">
-                       <div class="card-header bg-secondary">
-                           <strong class="card-title text-light">ORDER</strong>
-                       </div>
-                       <div class="card-body text-black bg-success">
-                          
-                                   
-                                     <p>batches         :{{d.batches}} </p>
-                                     <p>quantity        :{{d.quantity}} </p>
-                                     <p> component      :{{d.component}} </p>
-                                     <p> componentType  :{{d.componentType}} </p>
-                                     <p> expectedDate   :{{d.expectedDate}} </p>
-                                     <p> orderDate      :{{d.orderDate}} </p>
-                                     <p> supplier       :{{d.supplier}} </p>
-                                     <p> deliveryMode   :{{d.deliveryMode}} </p>
-                                     <!-- <p> dispatchStatus :{{d.dispatchStatus}} </p> -->
+<form (ngSubmit)="onSubmit()" class="form-horizontal" #f="ngForm">
+    <div class="col col-md-3"><label for="Component Type" class=" form-control-label">Year</label></div>
+        <div class="col-12 col-md-9">
+            <select name="year" id="year" class="form-control" ngModel required >
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
 
-                               <br>
-                               <button class="btn" (click)="onsubmit(d.component,d.quantity)" >Process Order</button>      
-                                 
+            </select>
+        </div>
+    <div class="form-actions form-group" ><button type="submit" class="btn btn-success btn-sm">Submit</button></div>
+</form>
+<!-- <input type="text" class ="form-control" (input)="setYear($event)" > -->
 
-                       </div>
-                   </div>
-               </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="chartContainer" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>

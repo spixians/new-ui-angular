@@ -10,49 +10,21 @@
                 <strong>Fill In the order details</strong> 
               </div>
               <div class="card-body card-block">
-                  <form (ngSubmit)="onSubmit()" class="form-horizontal" #f="ngForm" >
-                      <div class="row form-group">
-                        <div class="col col-md-3"><label for="Component" class=" form-control-label">Component</label></div>
-                          <div class="col-12 col-md-9">
-                            <select name="component" id="component" class="form-control" ngModel required >
-                                <option value="0">Please select</option>
-                                <option value="1">Inner Ring</option>
-                                <option value="2">Outer Ring</option>
-                                <option value="3">Ball</option>
-                                <option value="4">Roller</option>
-                                <option value="5">Cage</option>
-                                <option value="6">Lubricant</option>
-                              </select>
-                          </div>
-                        </div>
+                  <form (ngSubmit)="onSubmit()" class="form-horizontal" #f="NgForm" >
+
+                        
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="Component Type" class=" form-control-label">Component Type</label></div>
+                            <div class="col col-md-3"><label for="Component Type" class=" form-control-label">Raw Material Type</label></div>
                               <div class="col-12 col-md-9">
                                 <select name="componentType" id="componentType" class="form-control" ngModel required >
                                   <option value="0">Please select</option>
-                                  <option value="1">Type 1</option>
-                                  <option value="2">Type 2</option>
-                                  <option value="3">Type 3</option>
-                                  <option value="4">Type 4</option>
-                                  <option value="5">Type 5</option>
-                                  <option value="6">Type 6</option>
+                                  <option value="1">Steel</option>
+                                  <option value="2">Iron</option>
+                                  <option value="3">Chrome</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3"><label for="Supplier" class=" form-control-label">Supplier Name</label></div>
-                            <div class="col-12 col-md-9">
-                                <select name="supplier" id="supplier" class="form-control" ngModel required >
-                                    <option value="0">Please select</option>
-                                    <option value="1">s1</option>
-                                    <option value="2">s2</option>
-                                    <option value="3">s3</option>
-                                    <option value="4">s4</option>
-                                    <option value="5">s5</option>
-                                    <option value="6">s6</option>
-                                </select>
-                            </div>
-                        </div>
+                        
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="quantity" class=" form-control-label">Quantity</label></div>
                             <div class="col-12 col-md-9">
@@ -64,33 +36,22 @@
                                 [(ngModel)]="q" required>
                               </div>
                         </div>
+                        
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="Batches" class=" form-control-label">Batches</label></div>
-                            <div class="col-12 col-md-9">
-                              <input 
-                                type="number" 
-                                id="batches" 
-                                name="batches" 
-                                placeholder="Enter no. of Batches" 
-                                class="form-control"
-                                ngModel required>
-                              </div>
-                        </div>
-                          <div class="row form-group">
-                              <div class="col col-md-3"><label for="Price" class=" form-control-label" >Price</label></div>
+                              <div class="col col-md-3"><label for="Input Weight" class=" form-control-label" >Input Weight</label></div>
                               <div class="col-12 col-md-9">
                                 <input 
                                   type="number" 
                                   id="price" 
                                   name="price" 
-                                  placeholder="Enter the price" 
+                                  placeholder="Enter the weight" 
                                   class="form-control"
                                   [(ngModel)]="p" required></div>
                         </div>
                         <div class="row form-group">
                               <div class="col col-md-3"><label for="amount" class=" form-control-label">Total Transaction Amount</label></div>
                               <div class="col-12 col-md-9"  [(ngModel)]="totalamount" >
-                                  <i class="fas fa-rupee-sign"> {{p*q}} </i>  
+                                <p> {{p*q}} </p>
                               </div>
                         </div>
                         <div class="row form-group">

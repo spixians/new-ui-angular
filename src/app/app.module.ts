@@ -17,15 +17,18 @@ import { AvailablityCheckComponent } from './skf/availablity-check/availablity-c
 import { Routes, RouterModule }from "@angular/router";
 import { RawmaterialSupplierComponent } from './rawmaterial-supplier/rawmaterial-supplier.component';
 import { ComponentSupplierComponent } from './componentSupplier/component-supplier.component';
-import { DashboardCComponent } from './componentSupplier/dashboard-c/dashboard-c.component';
+import { DashboardcComponent } from './componentSupplier/dashboard-c/dashboard-c.component';
 import { PlaceOrderCComponent } from './componentSupplier/place-order-c/place-order-c.component';
-import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
-import { YellowOrderCComponent } from './componentSupplier/yellow-order-c/yellow-order-c.component';
-import { RedOrderCComponent } from './componentSupplier/red-order-c/red-order-c.component';
+//import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
+//import { YellowOrderCComponent } from './componentSupplier/yellow-order-c/yellow-order-c.component';
+//import { RedOrderCComponent } from './componentSupplier/red-order-c/red-order-c.component';
+//import { OrderTableComponent } from './componentSupplier/order-table/order-table.component';
+
 import { AvailabilityCheckCComponent } from './componentSupplier/availability-check-c/availability-check-c.component';
 import { OrderHistoryCComponent } from './componentSupplier/order-history-c/order-history-c.component';
 import { skfOrderService } from './services/skf-order.service';
 import { SkfOrderClass } from './classes/skf-order-schema';
+
 // import { injectInjector } from '@angular/core/src/render3/di';
 import { Observable } from 'rxjs';
 import { AuthService} from './auth/auth.service';
@@ -37,15 +40,21 @@ import { TrackinventoryComponent } from './rawmaterial-supplier/trackinventory/t
 import { AddinventoryComponent } from './rawmaterial-supplier/addinventory/addinventory.component';
 import { InventoryskfComponent } from './skf/inventoryskf/inventoryskf.component';
 import { DelaysskfComponent } from './skf/delaysskf/delaysskf.component';
-
+import { DemandClass } from './classes/demand-class';
+import { PostDemandClass } from './classes/demand-class';
 import { InventorycsComponent } from './componentSupplier/inventorycs/inventorycs.component';
+import { ViewOrderComponent } from './componentSupplier/vieworder/vieworder.component';
+import { OrderTableComponent } from './componentSupplier/order-table/order-table.component';
 import { ViewordersComponent } from './skf/vieworders/vieworders.component';
 import { Page1Component } from './skf/page1/page1.component';
 import { Page2Component } from './skf/page2/page2.component';
 import { ColorTrackClass } from './classes/color-track-schema';
 import { colorTrackService } from './services/color-track.service';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
-
+import {DemandService} from './services/demand.service';
+import { RmviewComponent } from './rawmaterial-supplier/rmview/rmview.component';
+import { NotificationComponent } from './notification/notification.component';
+import { GreenOrderCComponent } from './componentSupplier/green-order-c/green-order-c.component';
 // import { SidebarComponent } from './skf/sidebar/sidebar.component';
 
   // import { DashboardComponent } from './skf/dashboard/dashboard.component';
@@ -65,11 +74,9 @@ import { colorTrackService } from './services/color-track.service';
     // LoginComponent,
     RawmaterialSupplierComponent,
     ComponentSupplierComponent,
-    DashboardCComponent,
+    DashboardcComponent,
     PlaceOrderCComponent,
-    GreenOrderCComponent,
-    YellowOrderCComponent,
-    RedOrderCComponent,
+    
     AvailabilityCheckCComponent,
     OrderHistoryCComponent,
     SignupComponent,
@@ -81,9 +88,15 @@ import { colorTrackService } from './services/color-track.service';
     DelaysskfComponent,
     InventorycsComponent,
     ViewordersComponent,
+    OrderTableComponent,
+    RmviewComponent,
+    NotificationComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
     
+    ViewOrderComponent,
+    
+    GreenOrderCComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +105,7 @@ import { colorTrackService } from './services/color-track.service';
     // RouterModule.forRoot(),
     HttpClientModule
     ],
-  providers: [skfOrderService, SkfOrderClass,AuthService ,ColorTrackClass, colorTrackService ],
+  providers: [skfOrderService, SkfOrderClass,AuthService ,DemandClass, PostDemandClass, DemandService ,ColorTrackClass, colorTrackService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

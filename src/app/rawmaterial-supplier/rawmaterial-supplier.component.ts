@@ -22,13 +22,9 @@ export class RawmaterialSupplierComponent implements OnInit {
         link: "/rawmaterial-supplier/dashboard-r"
         
       },{
-        title:"Add Inventory",
-        icon : "menu-icon fa fa-bar-chart",
-        link:"/rawmaterial-supplier/addinventory"
-      },{
-        title:"Track Inventory",
+        title:"View Order",
         icon : "menu-icon fa fa-tasks",
-        link:"/rawmaterial-supplier/trackinventory"
+        link:"/rawmaterial-supplier/rmview"
       }
   ]
 }
