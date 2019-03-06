@@ -65,6 +65,12 @@ export class Page1Component implements OnInit {
     return "red-color"
    }
 
+   YellowCheck(val){
+     return "yellow-color"
+   }
+   GreenCheck(val){
+     return "green-color"
+   }
   //  sample(l,m,n,p){
      
 

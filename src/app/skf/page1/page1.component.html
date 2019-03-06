@@ -28,12 +28,12 @@
                                 <td>{{d.quantity/d.frequency*1.17}}</td>
                                 <td>{{sample(d.quantity,d.frequency)}}</td>
                                 <td>{{d.supplyname}}</td> -->
-                                <td>{{sample(d.quantity,d.frequency)}}</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td [ngClass]="GreenCheck(d)"></td>
+                                <td [ngClass]="GreenCheck(d)"></td>
+                                <td [ngClass]="YellowCheck(d)"></td>
+                                <td [ngClass]="YellowCheck(d)"></td>
+                                <td [ngClass]="YellowCheck(d)"></td>
+                                <td [ngClass]="RedCheck(d)"></td>
                                 
                                 <td><button class="btn btn-primary" id="{{'button_'+ d.supplyname}}" (click)="onsubmit()">View</button></td>
                                 <!-- <td></td> -->
