@@ -16,18 +16,17 @@ export class OrderHistoryComponent implements OnInit {
 
   constructor(private skfOrder : skfOrderService ,
               private skfSchema : SkfOrderClass ) { 
+                console.log('hi');
+                this.skfOrder.getSkfOrders()
+                .subscribe(
+                  data=>{
+                    console.log(data)
+                    this.orderData=data
+                    // console.log(this.orderData)
             
-    console.log('hi');
-    this.skfOrder.getSkfOrders()
-    .subscribe(
-      data=>{
-        this.orderData=data
-        console.log(this.orderData)
-
-      }
-    )
-   
-    
+                  }
+                )
+            
 
   }
 
